@@ -11,7 +11,7 @@ for i=1:n
     Dist_single(i).prob = length(k)/length(txt);
 end 
  % entropy calculation
-H1 = -sum([Dist_single.prob].*log2([Dist_single.prob]));
+H1 = -mean([Dist_single.prob].*log2([Dist_single.prob]));
 
 
 %% 1.2
