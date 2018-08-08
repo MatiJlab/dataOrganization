@@ -7,7 +7,7 @@ SD = 10; %smoothing parameter
 num_dir = 2; % number of relevent directions
 
 % get PD and Null from speed task
-if ~(min([data_cs_speed.trials.screen_rotation])== max([data_cs_speed.trials.screen_rotation]))
+if ~(max([data_cs_speed.trials.screen_rotation])== max([data_cs_speed.trials.screen_rotation]))
     disp(['Speed tuning task : Screen was rotated within session in cell ' num2str(data_cs_speed.info.cell_ID)])
 end   
 if ~(min([data_cs_dir.trials.screen_rotation])== max([data_cs_dir.trials.screen_rotation]))
